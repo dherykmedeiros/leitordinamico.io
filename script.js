@@ -1,30 +1,35 @@
 let currentPage = 1;
 let darkTheme = true;
+const totalPages = document.querySelectorAll('.page').length;
 
 function nextPage() {
-    const currentPageElement = document.getElementById('page' + currentPage);
-    currentPageElement.style.transition = 'transform 0.5s ease';
-    currentPageElement.style.transform = 'rotateY(-180deg)';
-    setTimeout(() => {
-        currentPageElement.style.display = 'none';
-        currentPage++;
-        const nextPageElement = document.getElementById('page' + currentPage);
-        nextPageElement.style.display = 'block';
-        nextPageElement.style.transform = 'rotateY(0deg)';
-    }, 500);
+    if (currentPage < totalPages) {
+        const currentPageElement = document.getElementById('page' + currentPage);
+        currentPageElement.style.transition = 'transform 0.5s ease';
+        currentPageElement.style.transform = 'rotateY(-180deg)';
+        setTimeout(() => {
+            currentPageElement.style.display = 'none';
+            currentPage++;
+            const nextPageElement = document.getElementById('page' + currentPage);
+            nextPageElement.style.display = 'block';
+            nextPageElement.style.transform = 'rotateY(0deg)';
+        }, 500);
+    }
 }
 
 function prevPage() {
-    const currentPageElement = document.getElementById('page' + currentPage);
-    currentPageElement.style.transition = 'transform 0.5s ease';
-    currentPageElement.style.transform = 'rotateY(180deg)';
-    setTimeout(() => {
-        currentPageElement.style.display = 'none';
-        currentPage--;
-        const prevPageElement = document.getElementById('page' + currentPage);
-        prevPageElement.style.display = 'block';
-        prevPageElement.style.transform = 'rotateY(0deg)';
-    }, 500);
+    if (currentPage > 1) {
+        const currentPageElement = document.getElementById('page' + currentPage);
+        currentPageElement.style.transition = 'transform 0.5s ease';
+        currentPageElement.style.transform = 'rotateY(180deg)';
+        setTimeout(() => {
+            currentPageElement.style.display = 'none';
+            currentPage--;
+            const prevPageElement = document.getElementById('page' + currentPage);
+            prevPageElement.style.display = 'block';
+            prevPageElement.style.transform = 'rotateY(0deg)';
+        }, 500);
+    }
 }
 
 function toggleTheme() {
