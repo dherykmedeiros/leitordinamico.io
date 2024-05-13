@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>História</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="story">
+            <div class="page" id="page1">
+                <h1>Página 1</h1>
+                <p>Era uma vez, em um reino distante, um jovem cavaleiro chamado Arthur.</p>
+                <p>Arthur havia sido designado pelo rei para uma missão perigosa: resgatar a princesa Isabella das garras de um dragão terrível.</p>
+                <p>Montando seu fiel cavalo, Arthur partiu em direção à caverna do dragão, determinado a salvar a princesa e trazer paz ao reino.</p>
+                <button onclick="nextPage()">Próxima página</button>
+            </div>
+            <div class="page" id="page2">
+                <h1>Página 2</h1>
+                <p>No caminho para a caverna, Arthur enfrentou muitos desafios.</p>
+                <p>Ele teve que atravessar florestas escuras, escalar montanhas íngremes e enfrentar criaturas mágicas que protegiam o dragão.</p>
+                <p>Mas com coragem e determinação, Arthur superou cada obstáculo, chegando mais perto de seu objetivo a cada passo.</p>
+                <button onclick="prevPage()">Página anterior</button>
+                <button onclick="nextPage()">Próxima página</button>
+            </div>
+            <div class="page" id="page3">
+                <h1>Página 3</h1>
+                <p>Ao chegar à caverna, Arthur enfrentou o dragão em uma batalha épica.</p>
+                <p>Com sua espada reluzente e sua determinação inabalável, Arthur derrotou o dragão e libertou a princesa Isabella.</p>
+                <p>O reino celebrou a bravura de Arthur, e ele se tornou um herói, lembrado para sempre por sua coragem e nobreza de espírito.</p>
+                <button onclick="prevPage()">Página anterior</button>
+            </div>
+        </div>
+        
+        <button class="toggle-theme-btn" onclick="toggleTheme()">Alternar Tema</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
