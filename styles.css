@@ -19,6 +19,7 @@ body {
     height: 100vh;
     perspective: 1000px;
     flex-direction: column;
+    position: relative;
 }
 
 .story {
@@ -61,5 +62,22 @@ button:hover {
 
 .toggle-theme-btn {
     position: absolute;
-    bottom: 20px;
+    top: 300px; /* Distância do botão até a parte superior da página */
+    left: 80%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 40px;
+    z-index: 1; /* Garante que o botão fique sobreposto ao conteúdo */
+}
+
+@media screen and (max-width: 600px) {
+    .toggle-theme-btn {
+        position: absolute;
+        bottom: 20px;
+        left: 85%;
+        transform: translateX(-50%);
+        width: 120px;
+        height: 40px;
+    }
+
 }
